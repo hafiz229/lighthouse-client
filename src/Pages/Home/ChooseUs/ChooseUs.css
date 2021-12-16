@@ -1,0 +1,32 @@
+.btn-grad-expand {
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #f09819 51%,
+    #ff512f 100%
+  );
+}
+.btn-grad-expand {
+  font-weight: bolder;
+  margin: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 5px;
+  display: block;
+}
+
+.btn-grad-expand:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.details-color {
+  color: gray;
+}
