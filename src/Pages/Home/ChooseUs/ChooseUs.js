@@ -24,9 +24,16 @@ const ChooseUs = () => {
     <div style={{ backgroundColor: "lightgray" }} className="py-3">
       <div
         id="chooseus"
-        className="container d-md-flex justify-content-evenly align-items-center"
+        className="container d-md-flex justify-content-between align-items-center"
       >
-        <div className="text-start mb-2">
+        <div className="intro-banner pb-2">
+          <img
+            src={Light1}
+            alt="Light1"
+            className=" mx-auto d-block banner-radius"
+          />
+        </div>
+        <div className="text-start pb-2">
           <h1 style={{ fontSize: "3.5em", fontWeight: "700" }}>
             Why Choose Us
           </h1>
@@ -86,13 +93,6 @@ const ChooseUs = () => {
               </Accordion.Collapse>
             </Card>
           </Accordion>
-        </div>
-        <div className="intro-banner mb-2">
-          <img
-            src={Light1}
-            alt="Light1"
-            className=" mx-auto d-block banner-radius"
-          />
         </div>
       </div>
     </div>
