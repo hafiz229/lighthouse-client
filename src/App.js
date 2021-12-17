@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home/Home";
 import Footer from "./Pages/Shared/Footer/Footer";
 import DiscoverProducts from "./Pages/Discover/DiscoverProducts/DiscoverProducts";
+import Booking from "./Pages/Booking/Booking";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path="/discover">
             <DiscoverProducts />
+          </Route>
+          <Route path="/booking/:productId">
+            <Booking />
           </Route>
         </Switch>
         <Footer></Footer>
