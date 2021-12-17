@@ -6,14 +6,13 @@ import "./ChooseUs.css";
 
 const ChooseUs = () => {
   function CustomToggle({ children, eventKey }) {
-    const decoratedOnClick = useAccordionButton(eventKey, () =>
-      console.log("totally custom!")
-    );
+    const decoratedOnClick = useAccordionButton(eventKey);
 
     return (
       <Link
         className="btn-grad-expand d-inline-block"
         onClick={decoratedOnClick}
+        to="#"
       >
         {children}
       </Link>
