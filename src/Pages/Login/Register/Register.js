@@ -37,79 +37,77 @@ const Register = () => {
           className=" d-flex align-items-center rounded-3 py-3 fw-bold contact"
           id="contact"
         >
-          {!isLoading && (
-            <Form className="text-start mx-auto" style={{ width: "50%" }}>
-              <Form.Group className="mb-3">
-                <Form.Label>Name</Form.Label>
-                <Form.Control
-                  required
-                  type="text"
-                  placeholder="Enter name"
-                  name="name"
-                  onChange={handleOnChange}
-                />
-              </Form.Group>
+          <Form className="text-start mx-auto" style={{ width: "50%" }}>
+            <Form.Group className="mb-3">
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                placeholder="Enter name"
+                name="name"
+                onChange={handleOnChange}
+              />
+            </Form.Group>
 
-              <Form.Group className="mb-3">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control
-                  required
-                  type="email"
-                  placeholder="Enter email"
-                  name="email"
-                  onChange={handleOnChange}
-                />
-              </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control
+                required
+                type="email"
+                placeholder="Enter email"
+                name="email"
+                onChange={handleOnChange}
+              />
+            </Form.Group>
 
-              <Form.Group className="mb-3">
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                  required
-                  type="password"
-                  placeholder="Enter password"
-                  name="password"
-                  onChange={handleOnChange}
-                />
-              </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                required
+                type="password"
+                placeholder="Enter password"
+                name="password"
+                onChange={handleOnChange}
+              />
+            </Form.Group>
 
-              <Form.Group className="mb-3">
-                <Form.Label>Confirm Password</Form.Label>
-                <Form.Control
-                  required
-                  type="password"
-                  placeholder="Enter password"
-                  name="password2"
-                  onChange={handleOnChange}
-                />
-              </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Confirm Password</Form.Label>
+              <Form.Control
+                required
+                type="password"
+                placeholder="Enter password"
+                name="password2"
+                onChange={handleOnChange}
+              />
+            </Form.Group>
 
+            <Button
+              onClick={handleLoginSubmit}
+              className="fw-bold d-inline-block"
+              variant="primary"
+              type="submit"
+            >
+              Register
+            </Button>
+            <br />
+            <NavLink to="/login">
               <Button
-                onClick={handleLoginSubmit}
-                className="fw-bold d-inline-block"
-                variant="primary"
-                type="submit"
+                style={{ textDecoration: "none" }}
+                className="px-0 fw-bold"
+                variant="link"
               >
-                Register
+                Already Registered? Please Login
               </Button>
-              <br />
-              <NavLink to="/login">
-                <Button
-                  style={{ textDecoration: "none" }}
-                  className="px-0 fw-bold"
-                  variant="link"
-                >
-                  Already Registered? Please Login
-                </Button>
-              </NavLink>
-              {isLoading && show && (
-                <Spinner animation="border" variant="primary" />
-              )}
-              {user?.email && show && (
-                <Alert variant="success">User Created Successfully</Alert>
-              )}
-              {authError && show && <Alert variant="danger">{authError}</Alert>}
-            </Form>
-          )}
+            </NavLink>
+            {isLoading && show && (
+              <Spinner animation="border" variant="primary" />
+            )}
+            {user?.email && show && (
+              <Alert variant="success">User Created Successfully</Alert>
+            )}
+            {authError && show && <Alert variant="danger">{authError}</Alert>}
+          </Form>
         </div>
       </div>
     </div>

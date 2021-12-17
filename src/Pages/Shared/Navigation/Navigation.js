@@ -53,6 +53,12 @@ const Navigation = () => {
                 Contact Us
               </Nav.Link>
 
+              {user?.email && (
+                <Nav.Link as={Link} to="/dashboard">
+                  Dashboard
+                </Nav.Link>
+              )}
+
               {user?.email ? (
                 <div>
                   <Button>{user?.displayName}</Button>
