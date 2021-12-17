@@ -19,7 +19,7 @@ import UserReview from "../UserReview/UserReview";
 const Dashboard = () => {
   // from react router nesting
   let { path, url } = useRouteMatch();
-  console.log(url);
+  //   console.log(url);
 
   // receive admin from useAuth()
   const { admin, logOut } = useAuth();
@@ -73,15 +73,19 @@ const Dashboard = () => {
                 </div>
               )}
               {/* normal user routes */}
-              <Nav.Link as={Link} to={`${url}/myOrders`}>
-                My Orders
-              </Nav.Link>
-              <Nav.Link as={Link} to={`${url}/pay`}>
-                My Payments
-              </Nav.Link>
-              <Nav.Link as={Link} to={`${url}/userReview`}>
-                User Review
-              </Nav.Link>
+              {!admin && (
+                <div className="d-md-flex">
+                  <Nav.Link as={Link} to={`${url}/myOrders`}>
+                    My Orders
+                  </Nav.Link>
+                  <Nav.Link as={Link} to={`${url}/pay`}>
+                    My Payments
+                  </Nav.Link>
+                  <Nav.Link as={Link} to={`${url}/userReview`}>
+                    User Review
+                  </Nav.Link>
+                </div>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
