@@ -49,7 +49,7 @@ const AddProducts = () => {
         </select>
 
         <input
-          className="d-inline-block btn-primary rounded p-2 fw-bold mb-5"
+          className="d-inline-block btn btn-grad-common rounded p-2 fw-bold mb-5"
           type="submit"
           value="Add Product"
         />

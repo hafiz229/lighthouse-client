@@ -66,7 +66,7 @@ const Login = () => {
 
               <Button
                 onClick={handleLoginSubmit}
-                className="fw-bold d-inline-block mt-3"
+                className="fw-bold d-inline-block mt-3 btn btn-grad-common"
                 variant="primary"
                 type="submit"
               >
@@ -92,7 +92,7 @@ const Login = () => {
               <br />
               <Button
                 onClick={handleGoogleSignIn}
-                className="fw-bold d-inline-block mb-5"
+                className="fw-bold d-inline-block mb-5 btn btn-grad-common"
                 variant="primary"
               >
                 Google Sign In

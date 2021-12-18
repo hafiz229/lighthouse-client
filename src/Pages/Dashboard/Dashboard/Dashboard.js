@@ -13,7 +13,6 @@ import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
 import ManageProducts from "../ManageProducts/ManageProducts";
 import MyOrders from "../MyOrders/MyOrders";
-import Pay from "../Pay/Pay";
 import UserReview from "../UserReview/UserReview";
 
 const Dashboard = () => {
@@ -78,9 +77,6 @@ const Dashboard = () => {
                   <Nav.Link as={Link} to={`${url}/myOrders`}>
                     My Orders
                   </Nav.Link>
-                  <Nav.Link as={Link} to={`${url}/pay`}>
-                    My Payments
-                  </Nav.Link>
                   <Nav.Link as={Link} to={`${url}/userReview`}>
                     User Review
                   </Nav.Link>
@@ -113,9 +109,6 @@ const Dashboard = () => {
         {/* normal user routes */}
         <NormalRoute path={`${path}/myOrders`}>
           <MyOrders></MyOrders>
-        </NormalRoute>
-        <NormalRoute path={`${path}/pay`}>
-          <Pay></Pay>
         </NormalRoute>
         <NormalRoute path={`${path}/userReview`}>
           <UserReview></UserReview>

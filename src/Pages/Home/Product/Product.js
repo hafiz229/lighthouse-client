@@ -19,13 +19,8 @@ const Product = ({ product }) => {
           <p>{description}</p>
           <div className="d-flex justify-content-between align-items-center">
             <h2 className="fw-bold">${price}</h2>
-            <Link to={`/booking/${_id}`}>
-              <button
-                className="btn mb-3"
-                style={{ backgroundColor: "rgb(93, 63, 211)", color: "white" }}
-              >
-                Order Now
-              </button>
+            <Link to={`/booking/${_id}`} style={{ textDecoration: "none" }}>
+              <button className="btn btn-grad-common">Order Now</button>
             </Link>
           </div>
         </div>

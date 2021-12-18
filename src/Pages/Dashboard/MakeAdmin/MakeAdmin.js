@@ -44,10 +44,10 @@ const MakeAdmin = () => {
           type="email"
           onBlur={handleOnBlur}
           placeholder="Enter email"
-          className="add-product py-2"
+          className="add-product py-2 fw-bold"
         />
         <br />
-        <Button type="submit" className="py-2 my-3">
+        <Button type="submit" className="py-2 my-3 btn btn-grad-common mx-auto">
           Make Admin
         </Button>
         {success && show && (

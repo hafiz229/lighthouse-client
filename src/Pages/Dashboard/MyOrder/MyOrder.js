@@ -17,7 +17,7 @@ const MyOrder = ({ myOrder, handleDelete }) => {
           backgroundColor: "rgba(128, 128, 128, 0.137)",
         }}
       >
-        <div className="text-start px-5">
+        <div className="text-start p-5">
           <h3 className="fw-bold">{order}</h3>
           <p>{name}</p>
           <p>{email}</p>
@@ -28,8 +28,7 @@ const MyOrder = ({ myOrder, handleDelete }) => {
 
           {status === "Pending" && (
             <Button
-              className="btn mb-3 mt-3"
-              style={{ backgroundColor: "rgb(93, 63, 211)", color: "white" }}
+              className="btn mt-3 btn-grad-common"
               onClick={() => handleDelete(_id)}
             >
               Cancel Order

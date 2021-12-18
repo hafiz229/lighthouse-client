@@ -53,10 +53,7 @@ const ManageProducts = () => {
                   <div className="d-flex justify-content-between align-items-center">
                     <h2 className="fw-bold">${product.price}</h2>
                     <Button
-                      style={{
-                        backgroundColor: "orange",
-                        marginBottom: "10px",
-                      }}
+                      className="btn btn-grad-common"
                       onClick={() => handleDelete(product._id)}
                     >
                       Delete

@@ -9,7 +9,7 @@ import useAuth from "../../../hooks/useAuth";
 const Navigation = () => {
   const { user, logOut } = useAuth();
   return (
-    <div>
+    <div id="banner">
       <Navbar
         bg="dark"
         variant="dark"
@@ -28,7 +28,7 @@ const Navigation = () => {
           </Navbar.Brand>
 
           <Navbar.Collapse className="justify-content-end">
-            <Nav className="me-auto text-start">
+            <Nav className="me-auto text-start fw-bold">
               <Nav.Link as={HashLink} to="/home#banner">
                 Home
               </Nav.Link>
@@ -37,20 +37,20 @@ const Navigation = () => {
                 Discover
               </Nav.Link>
 
+              <Nav.Link as={HashLink} to="/home#feature">
+                Feature
+              </Nav.Link>
+
               <Nav.Link as={HashLink} to="/home#product">
                 Product
               </Nav.Link>
 
-              <Nav.Link as={Link} to="/blogs">
-                Blogs
+              <Nav.Link as={HashLink} to="/home#chooseus">
+                Why Us
               </Nav.Link>
 
-              <Nav.Link as={HashLink} to="/home#about">
-                About
-              </Nav.Link>
-
-              <Nav.Link as={HashLink} to="/home#contact">
-                Contact Us
+              <Nav.Link as={HashLink} to="/home#review">
+                Review
               </Nav.Link>
 
               {user?.email && (
@@ -61,8 +61,10 @@ const Navigation = () => {
 
               {user?.email ? (
                 <div>
-                  <Button>{user?.displayName}</Button>
-                  <Button onClick={logOut}>Logout</Button>
+                  <Button className="button-design">{user?.displayName}</Button>
+                  <Button className="button-design ms-2" onClick={logOut}>
+                    Logout
+                  </Button>
                 </div>
               ) : (
                 <Nav.Link as={Link} to="/login">

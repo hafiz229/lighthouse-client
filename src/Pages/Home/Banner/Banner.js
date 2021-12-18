@@ -10,7 +10,7 @@ const Banner = () => {
   return (
     <div className="btn-grad-banner">
       <div
-        id="banner"
+        
         className="pb-5 container d-md-flex justify-content-between align-items-center "
       >
         <div className="intro-banner pb-5">
