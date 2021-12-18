@@ -6,7 +6,7 @@ const DiscoverProducts = () => {
   const [discoverProducts, setDiscoverProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://desolate-scrubland-98270.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setDiscoverProducts(data));
   }, []);

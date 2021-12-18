@@ -4,7 +4,7 @@ import useAuth from "../../../hooks/useAuth";
 
 const MakeAdmin = () => {
   // <Alert variant="success">User Created Successfully</Alert>
-  // http://localhost:5000/
+  // https://desolate-scrubland-98270.herokuapp.com/
   const [email, setEmail] = useState("");
   // show success msg if make admin success
   const [success, setSuccess] = useState(false);
@@ -19,7 +19,7 @@ const MakeAdmin = () => {
   const handleAdminSubmit = (e) => {
     setShow(true);
     const user = { email };
-    fetch("http://localhost:5000/users/admin", {
+    fetch("https://desolate-scrubland-98270.herokuapp.com/users/admin", {
       method: "PUT",
       headers: {
         authorization: `Bearer ${token}`,

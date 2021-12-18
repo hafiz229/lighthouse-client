@@ -7,12 +7,14 @@ const UserReview = () => {
   const { register, handleSubmit, reset } = useForm();
   const { user } = useAuth();
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/reviews", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Thanks for your feedback");
-        reset();
-      }
-    });
+    axios
+      .post("https://desolate-scrubland-98270.herokuapp.com/reviews", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Thanks for your feedback");
+          reset();
+        }
+      });
   };
   return (
     <div className="py-1" style={{ backgroundColor: "lightgray" }}>

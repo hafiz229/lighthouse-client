@@ -13,19 +13,23 @@ const Booking = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${productId}`)
+    fetch(
+      `https://desolate-scrubland-98270.herokuapp.com/products/${productId}`
+    )
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [productId]);
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/orders", data).then((res) => {
-      console.log(res);
-      if (res.data.insertedId) {
-        alert("Order Placed Successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://desolate-scrubland-98270.herokuapp.com/orders", data)
+      .then((res) => {
+        console.log(res);
+        if (res.data.insertedId) {
+          alert("Order Placed Successfully");
+          reset();
+        }
+      });
   };
 
   return (

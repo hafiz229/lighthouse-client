@@ -6,12 +6,14 @@ import "./AddProducts.css";
 const AddProducts = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/products", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Product Inserted Successfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://desolate-scrubland-98270.herokuapp.com/products", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Product Inserted Successfully");
+          reset();
+        }
+      });
   };
   return (
     <div className="py-1" style={{ backgroundColor: "lightgray" }}>

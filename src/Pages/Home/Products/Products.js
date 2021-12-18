@@ -9,7 +9,9 @@ const Products = () => {
   const size = 8;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products?size=${size}`)
+    fetch(
+      `https://desolate-scrubland-98270.herokuapp.com/products?size=${size}`
+    )
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
