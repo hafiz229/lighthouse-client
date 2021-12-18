@@ -1,0 +1,6 @@
+/* Make it responsive*/
+@media only screen and (max-width: 688px) {
+  .notfound-img img {
+    width: 70%;
+  }
+}
