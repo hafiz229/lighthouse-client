@@ -37,7 +37,7 @@ const Dashboard = () => {
           <Navbar.Brand as={Link} to={`${url}`}>
             <img style={{ height: "30px", width: "30px" }} alt="" src={Logo} />{" "}
             <span className="fw-bolder">
-              <span style={{ color: "orange" }}>Light</span>House Dashboard
+              <span style={{ color: "orange" }}>Dashboard</span>
             </span>
           </Navbar.Brand>
 
