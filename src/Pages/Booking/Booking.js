@@ -53,12 +53,12 @@ const Booking = () => {
               className="d-flex flex-column justify-content-center align-items-center"
             >
               <input
-                className="w-100 py-2 fw-bold"
+                className="add-booking py-2 fw-bold"
                 defaultValue={user.displayName}
                 {...register("name", { required: true })}
               />
               <input
-                className="w-100 py-2 fw-bold"
+                className="add-booking py-2 fw-bold"
                 defaultValue={user.email}
                 {...register("email", { required: true })}
               />
