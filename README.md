@@ -2,11 +2,11 @@
 
 Light House
 
-## Description:
+## Description
 Light House is a light selling Marketplace for individuals worldwide. Buyers can sell lamps of different types here and Customers will find a huge collection of innovative lamps here.
 
 
-## Live Website Link:
+## Live Website
 
 https://lighthouse-229.firebaseapp.com/
 
