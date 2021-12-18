@@ -53,9 +53,9 @@ const ManageAllOrders = () => {
   return (
     <div style={{ backgroundColor: "lightgray" }} className="pb-5">
       <div className="container pb-5">
-        <h2 className="fw-bold py-3" id="products">
+        <h1 className="fw-bold py-3" id="products">
           Manage All Orders
-        </h2>
+        </h1>
         <div className="product-container">
           {allOrders.map((allOrder) => (
             <ManageAllOrder

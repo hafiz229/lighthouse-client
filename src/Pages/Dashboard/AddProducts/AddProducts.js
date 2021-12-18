@@ -15,7 +15,7 @@ const AddProducts = () => {
   };
   return (
     <div className="py-1" style={{ backgroundColor: "lightgray" }}>
-      <h1 className="py-3">Add New Products</h1>
+      <h1 className="fw-bold py-3">Add New Products</h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="d-flex flex-column justify-content-center align-items-center mx-auto"
