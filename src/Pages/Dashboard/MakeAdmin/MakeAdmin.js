@@ -1,9 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
+import { Alert, Button } from "react-bootstrap";
+import useAuth from "../../../hooks/useAuth";
 
 const MakeAdmin = () => {
+  // <Alert variant="success">User Created Successfully</Alert>
+  // http://localhost:5000/
+  const [email, setEmail] = useState("");
+  // show success msg if make admin success
+  const [success, setSuccess] = useState(false);
+  // clear msg
+  const [show, setShow] = useState(false);
+  // receive token from useAuth()
+  const { token } = useAuth();
+
+  const handleOnBlur = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleAdminSubmit = (e) => {
+    setShow(true);
+    const user = { email };
+    fetch("http://localhost:5000/users/admin", {
+      method: "PUT",
+      headers: {
+        authorization: `Bearer ${token}`,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount) {
+          console.log(data);
+          setSuccess(true);
+        }
+      });
+    e.preventDefault();
+  };
   return (
-    <div>
-      <h1>Make Admin</h1>
+    <div style={{ backgroundColor: "lightgray" }}>
+      <h1 className="py-3 fw-bold">Make Admin</h1>
+      <form onSubmit={handleAdminSubmit} className="mb-5">
+        <input
+          type="email"
+          onBlur={handleOnBlur}
+          placeholder="Enter email"
+          className="add-product py-2"
+        />
+        <br />
+        <Button type="submit" className="py-2 my-3">
+          Make Admin
+        </Button>
+        {success && show && (
+          <Alert severity="success" className="add-product mx-auto">
+            Made Admin successfully!
+          </Alert>
+        )}
+        {!success && show && (
+          <Alert severity="danger" className="add-product mx-auto">
+            Made Admin Failed!
+          </Alert>
+        )}
+      </form>
+      <div className="py-5"></div>
+      <div className="py-5"></div>
+      <div className="py-5"></div>
     </div>
   );
 };

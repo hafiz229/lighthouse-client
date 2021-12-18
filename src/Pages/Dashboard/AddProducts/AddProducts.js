@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import "./AddProducts.css";
 
 const AddProducts = () => {
-  // http://localhost:5000/
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios.post("http://localhost:5000/products", data).then((res) => {
