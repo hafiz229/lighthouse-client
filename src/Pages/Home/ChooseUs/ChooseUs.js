@@ -23,7 +23,7 @@ const ChooseUs = () => {
     <div id="chooseus">
       <div style={{ backgroundColor: "lightgray" }} className="py-3">
         <div className="container d-md-flex justify-content-between align-items-center">
-          <div className="intro-banner pb-2">
+          <div className="intro-banner pb-4">
             <img
               src={Light1}
               alt="Light1"
