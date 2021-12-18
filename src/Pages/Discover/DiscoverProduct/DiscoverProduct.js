@@ -17,9 +17,9 @@ const DiscoverProduct = ({ discoverProduct }) => {
           <p>{description}</p>
           <div className="d-flex justify-content-between align-items-center">
             <h2 className="fw-bold">${price}</h2>
-            <Link to={`/booking/${_id}`}>
+            <Link to={`/booking/${_id}`} style={{ textDecoration: "none" }}>
               <button
-                className="btn mb-3"
+                className="btn mb-3 btn-grad-common"
                 style={{ backgroundColor: "rgb(93, 63, 211)", color: "white" }}
               >
                 Order Now
