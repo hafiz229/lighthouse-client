@@ -3,7 +3,6 @@ import { Button } from "react-bootstrap";
 import "./ManageProducts.css";
 
 const ManageProducts = () => {
-  // http://localhost:5000/
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
