@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { Spinner } from "react-bootstrap";
 import ManageAllOrder from "../ManageAllOrder/ManageAllOrder";
 
 const ManageAllOrders = () => {
   const [allOrders, setAllOrders] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   // get all orders
   useEffect(() => {
+    setIsLoading(true);
     fetch("https://desolate-scrubland-98270.herokuapp.com/orders")
       .then((res) => res.json())
-      .then((data) => setAllOrders(data));
+      .then((data) => setAllOrders(data))
+      .finally(() => setIsLoading(false));
   }, []);
 
   // update the status of an order
@@ -56,16 +60,20 @@ const ManageAllOrders = () => {
         <h1 className="fw-bold py-3" id="products">
           Manage All Orders
         </h1>
-        <div className="product-container">
-          {allOrders.map((allOrder) => (
-            <ManageAllOrder
-              key={allOrder._id}
-              allOrder={allOrder}
-              handleDelete={handleDelete}
-              handleApprove={handleApprove}
-            ></ManageAllOrder>
-          ))}
-        </div>
+        {(isLoading && (
+          <Spinner className="mt-5" animation="grow" variant="primary" />
+        )) || (
+          <div className="product-container">
+            {allOrders.map((allOrder) => (
+              <ManageAllOrder
+                key={allOrder._id}
+                allOrder={allOrder}
+                handleDelete={handleDelete}
+                handleApprove={handleApprove}
+              ></ManageAllOrder>
+            ))}
+          </div>
+        )}
       </div>
       <div className="pb-5"></div>
       <div className="pb-5"></div>
